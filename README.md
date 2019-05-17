@@ -1,4 +1,11 @@
-# WAM Aparts&Rooms
-Website made for WAM Apartments&Rooms
+<h1 align="center">WAM Aparts&Rooms</h1>
 
-Technologies and languages used : VanillaJS & SASS & Gulp 
+<p align="center">
+  <strong>Website made for WAM Apartments&Rooms</strong></br>
+</p>
+
+<a align="center" href="www.wamazury.pl">WAM Apartments&Rooms</a>
+
+## Technologies and languages
+SASS & Gulp & VanillaJS
+
