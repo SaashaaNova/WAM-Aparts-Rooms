@@ -1,0 +1,156 @@
+@mixin slider-banner-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+    
+
+    .link-element {
+        display:inline-block;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        padding-left: 10em;
+        display: flex;
+    }
+
+    .slider-link {
+        color: white;
+        display: block;
+        font-family: $abril-font;
+        font-size: 8em;
+        margin: auto 0;
+    }
+    
+}
+
+
+/*=============================================
+=            SLider Home Section            =
+=============================================*/
+
+.main-slider {
+    height: 100%;
+    width: 100%;
+}
+
+.slides-container {
+    height: 93%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+.slide-one {
+    @include slider-banner-img();
+    background-image: url(http://wamazury.pl/wp-content/uploads/2019/04/img-slider-apart.jpg); 
+}
+
+.slide-two {
+    @include slider-banner-img();
+    background-image: url(http://wamazury.pl/wp-content/uploads/2019/04/img-slider-rooms.jpg);  
+}
+
+.slide-three {
+    @include slider-banner-img();
+    background-image: url(http://wamazury.pl/wp-content/uploads/2019/04/img-slider-local.jpg);  
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 8%;
+}
+
+button {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.dots {
+    width: 30%;
+    display: flex;
+    padding-left: 2.6em;
+    padding-top: 2.8em;
+
+} 
+
+.dot {
+    background: $primary-color;
+    width:1.6em;
+    height:1.6em;
+    border-radius: 50%;
+    margin-right: 2em;
+    cursor: pointer;
+    position: relative;
+ }
+            
+.arrows {
+    display: flex;
+    padding-right: 2.6em;
+    padding-top: 2.8em;
+    justify-content: flex-end;
+}
+
+.prev {
+    cursor: pointer;
+    width: 13em;
+    height: 4em;
+    position: relative;
+    transform: perspective(600px) rotareY(0deg);
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 13em;
+        height: 1.8em;
+        margin-right: 2em;
+        margin: auto 0;
+        left: 0;
+        top:0; 
+        bottom:0;
+        background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00OTUuMyAyOTYuOCA2MS4zIDguNCI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzA3NDY1QjtzdHJva2Utd2lkdGg6MC44O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30uc3Qxe2ZpbGw6bm9uZTtzdHJva2U6IzA3NDY1QjtzdHJva2Utd2lkdGg6MC44O3N0cm9rZS1taXRlcmxpbWl0OjEwO30uc3Qye2ZpbGw6IzA3NDY1Qjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTUzNy4zLDI4NiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tNDQyLjEsMzE1LjYiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNLTQzNS4zLDMwMC42Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTS00NDYuMywzMDUuMiIvPjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0tNDkzLjMsMzAxQy00OTMuMywzMDAuOS00OTMuMywzMDAuOS00OTMuMywzMDFDLTQ5My4zLDMwMC45LTQ5My4zLDMwMC45LTQ5My4zLDMwMWMwLTAuMSwwLTAuMSwwLTAuMQpjMCwwLDAtMC4xLDAtMC4xYzAsMCwwLDAsMC0wLjFjMCwwLDAsMCwwLjEtMC4xczAsMCwwLjEsMGMwLDAsMCwwLDAuMSwwbDUuNS0xLjRjMC4yLTAuMSwwLjQsMC4xLDAuNSwwLjNjMC4xLDAuMi0wLjEsMC40LTAuMywwLjUKbC0yLDAuNWg1Mi44YzAuMywwLDAuNSwwLjIsMC41LDAuNXMtMC4yLDAuNS0wLjUsMC41aC01Mi44bDIsMC41YzAuMiwwLjEsMC4zLDAuMywwLjMsMC41YzAsMC4yLTAuMiwwLjMtMC40LDAuM2MwLDAtMC4xLDAtMC4xLDAKbC01LjUtMS40Yy0wLjEsMC0wLjEsMC0wLjEtMC4xYzAsMCwwLDAsMCwwYy0wLjEsMC0wLjEtMC4xLTAuMS0wLjJDLTQ5My4zLDMwMS4xLTQ5My4zLDMwMS4xLTQ5My4zLDMwMQpDLTQ5My4zLDMwMS4xLTQ5My4zLDMwMS00OTMuMywzMDFDLTQ5My4zLDMwMS00OTMuMywzMDEtNDkzLjMsMzAxeiIvPjwvc3ZnPg==") no-repeat top center;
+    }
+
+    &:hover::after {
+        animation: spinner 1s linear infinite;
+    }
+}
+
+.next {
+    cursor: pointer;
+    width: 13em;
+    height: 4em;
+    position: relative;
+    transform: perspective(600px) rotareY(0deg);
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 13em;
+        height: 1.8em;
+        margin-right: 2em;
+        margin: auto 0;
+        left: 0;
+        top:0; 
+        bottom:0;
+        background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iLTQ5NS4zIDI5Ni44IDYxLjMgOC40IiA+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzA3NDY1QjtzdHJva2Utd2lkdGg6MC44O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30uc3Qxe2ZpbGw6bm9uZTtzdHJva2U6IzA3NDY1QjtzdHJva2Utd2lkdGg6MC44O3N0cm9rZS1taXRlcmxpbWl0OjEwO30uc3Qye2ZpbGw6IzA3NDY1Qjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTUzNy4zLDI4NiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tNDQyLjEsMzE1LjYiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTS00MzUuMywzMDAuNiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0tNDQ2LjMsMzA1LjIiLz48cGF0aCBjbGFzcz0ic3QyIiBkPSJNLTQzNiwzMDFDLTQzNiwzMDAuOS00MzYsMzAwLjktNDM2LDMwMUMtNDM2LDMwMC45LTQzNiwzMDAuOS00MzYsMzAxYzAtMC4xLDAtMC4xLDAtMC4xYzAsMCwwLTAuMSwwLTAuMWMwLDAsMCwwLDAtMC4xYzAsMCwwLDAtMC4xLTAuMXMwLDAtMC4xLDBjMCwwLDAsMC0wLjEsMGwtNS41LTEuNGMtMC4yLTAuMS0wLjQsMC4xLTAuNSwwLjNjLTAuMSwwLjIsMC4xLDAuNCwwLjMsMC41bDIsMC41aC01Mi44Yy0wLjMsMC0wLjUsMC4yLTAuNSwwLjVzMC4yLDAuNSwwLjUsMC41aDUyLjhsLTIsMC41Yy0wLjIsMC4xLTAuMywwLjMtMC4zLDAuNWMwLDAuMiwwLjIsMC4zLDAuNCwwLjNjMCwwLDAuMSwwLDAuMSwwbDUuNS0xLjRjMC4xLDAsMC4xLDAsMC4xLTAuMWMwLDAsMCwwLDAsMGMwLjEsMCwwLjEtMC4xLDAuMS0wLjJDLTQzNiwzMDEuMS00MzYsMzAxLjEtNDM2LDMwMUMtNDM2LDMwMS4xLTQzNjMwMS00MzYsMzAxQy00MzYsMzAxLTQzNiwzMDEtNDM2LDMwMXoiLz48L3N2Zz4=") no-repeat top center;
+    }
+
+    &:hover::before {
+        animation: spinner 1s linear infinite;
+    }
+}
+
+
+/*=====  End of SLider Home Section  ======*/
+

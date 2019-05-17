@@ -1,0 +1,73 @@
+/*----------  Mobile Content  ----------*/
+
+.header-mobile {
+    width: 100%;
+    height: 12em;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.logo-img-mobile-link {
+    width: 10%;
+    height: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.link-mobile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    cursor: pointer;
+    background: url(http://wamazury.pl/wp-content/uploads/2019/04/Logo-Boat-Mobile.png) center center no-repeat;
+    background-size: contain;
+    font-size: 5em;
+}
+
+.menu-contact-mobile {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-weight: $font-weight;
+        font-size: $font-size;
+        font-weight: 700;
+    }
+
+    p:first-of-type {
+        margin-right: 1.8em;
+    }
+}
+
+.nav-bottom-mobile {
+    width: 100%;
+    height: 10em;
+    z-index: 8;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transition: background 1s;
+}
+
+.reser-link-mobile,
+.menu-sign-mobile a {
+
+    @include hoverLinkStyling(0, -5px);
+}
+
+.menu-sign-mobile a.before-ele {
+    @include hoverLinkStylingMenuOpen();
+    line-height: 1.5em;
+    box-shadow: inset 0px 6px 3px -3px snow;
+}
+

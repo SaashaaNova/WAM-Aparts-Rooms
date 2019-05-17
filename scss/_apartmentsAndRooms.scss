@@ -1,0 +1,282 @@
+ /*=============================================
+=            Apartment Presentation            =
+=============================================*/
+
+ .apart-header,
+ .rooms-header {
+     width: 100%;
+     height: 60vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 5em;
+
+     h1 {
+         font-size: 10em;
+         font-family: $abril-font;
+         padding-bottom: 0.5em;
+     }
+
+     p {
+         text-align: center;
+         max-width: 64em;
+         font-size: 2.4em;
+         padding: 0 1.4em;
+         line-height: 2em;
+     }
+ }
+
+ /*----------  Apartment Presentation Section  ----------*/
+
+ .apart-row,
+ .rooms-row {
+     width: 90%;
+     margin: 0 auto;
+ }
+
+ .apart-offer,
+ .room-offer,
+ .kitchen {
+     display: flex;
+     width: 100%;
+     margin-bottom: 10em;
+ }
+
+ /* Slider */
+
+ .slider-section {
+     width: 75%;
+     padding-right: 4em;
+     position: relative;
+ }
+
+ .slides-cnt {
+     width: 100%;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .slide-offer {
+     position: absolute;
+     opacity: 0;
+     width: 100%;
+
+     img {
+         width: 100%;
+         height: auto;
+         margin: auto;
+         object-fit: contain;
+     }
+ }
+
+
+ /* Apartment description and info  */
+
+ .apart-info,
+ .room-info,
+ .kitchen-info {
+     width: 25%;
+     min-height: 100%;
+     border-top: 1px solid $primary-color;
+ }
+
+ .apar-desc,
+ .room-desc,
+ .kitchen-desc {
+     width: 100%;
+     margin-bottom: 2em;
+     max-width: 50em;
+
+     p {
+         font-size: 2.2em;
+         line-height: 2em;
+
+     }
+ }
+
+ .apar-desc,
+ .room-desc {
+
+     h2 {
+         font-size: 15em;
+         font-family: $abril-font;
+     }
+ }
+
+ .kitchen-desc {
+     h2 {
+         font-size: 12em;
+         font-family: $abril-font;
+     }
+ }
+
+ .policy {
+     margin-top: 2.7em;
+ }
+
+ .amenities,
+ .policy {
+     padding-top: 2em;
+     cursor: pointer;
+
+     span {
+         font-size: 3em;
+         font-weight: 700;
+         display: inline-block;
+         color: $primary-color;
+         margin-bottom: 0.5em;
+         position: relative;
+
+         &:before {
+             content: "";
+             position: absolute;
+             width: 9px;
+             height: 9px;
+             background-color: $primary-color;
+             border-radius: 50%;
+             visibility: hidden;
+             transform: translate(0);
+             transition: all 0.3s cubic-bezier(0, 0, .58, 1) 0s;
+             margin: auto 0;
+             right: -4%;
+             top: 0;
+             bottom: 0;
+         }
+
+         &:hover:before {
+             visibility: visible;
+             transform: translate(30px, 0);
+         }
+
+     }
+
+     ul {
+         opacity: 1;
+         max-height: 80em;
+         transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out 0.5s;
+     }
+
+     li {
+         list-style: none;
+         font-size: 2.2em;
+         max-width: 100em;
+     }
+
+     li:not(.first-child) {
+         padding-top: 1.2em;
+     }
+
+ }
+
+ .amenities>span.active-list,
+ .policy>span.active-list {
+
+     &:before {
+         visibility: visible;
+         transform: translate(30px, 0);
+     }
+
+ }
+
+ .amenities>ul.hide-list,
+ .policy>ul.hide-list {
+     max-height: 0;
+     overflow: hidden;
+     opacity: 0;
+     transition: all 0.5s ease-in-out;
+ }
+
+ /* Reservation link */
+
+ .res-link-apart {
+     margin-top: 4em;
+     display: inline-block;
+ }
+
+ .res-link-desc {
+     position: relative;
+     font-weight: 700;
+     color: $primary-color;
+     font-family: $abril-font;
+     font-size: 5em;
+     cursor: pointer;
+     transition: 0.7s;
+
+
+     &:before {
+         content: "";
+         position: absolute;
+         width: 13px;
+         height: 13px;
+         background-color: $primary-color;
+         border-radius: 50%;
+         visibility: hidden;
+         transform: translate(0);
+         transition: all 0.3s cubic-bezier(0, 0, .58, 1) 0s;
+         left: 0;
+         bottom: -30%;
+     }
+
+     &:hover:before {
+         visibility: visible;
+         transform: translate(0, 20px);
+     }
+ }
+
+ /* Footer */
+
+ .footer {
+     width: 100%;
+     height: 17.5em;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+     a {
+         text-decoration: none;
+         margin-left: 1em;
+     }
+
+     span {
+         font-size: 2em;
+         font-weight: 700;
+     }
+
+     a span {
+        position: relative;
+        border-bottom: 1px solid $primary-color;
+
+        &:hover {
+            font-weight: 700;
+            transition: font-weight 0.2s;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0.5em;
+            height: 0.5em;
+            background-color: $primary-color;
+            border-radius:50%;
+            visibility: hidden;
+            transform: translate(0);
+            transition: all 0.3s cubic-bezier(0,0,.58,1) 0s;
+            margin: auto 0;
+            right: -4%;
+            top:0;
+            bottom: 0;
+          }
+    
+          &:hover:before {
+            visibility: visible;
+            transform: translate(30px, 0);
+          }
+     }
+ }
+
+ .footer-address>span:nth-child(2) {
+     padding-left: 1em;
+ }
+
+ /*=====  End of Apartment Presentation  ======*/

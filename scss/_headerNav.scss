@@ -1,0 +1,257 @@
+@mixin hoverLinkStyling ($left, $bottom) {
+
+    position: relative;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    color: $primary-color;
+    font-size: $font-size;
+    cursor: pointer;
+    transition: 0.7s;
+
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0.4em;
+        height: 0.4em;
+        background-color: $primary-color;
+        border-radius: 50%;
+        visibility: hidden;
+        transform: translate(0);
+        transition: all 0.3s cubic-bezier(0, 0, .58, 1) 0s;
+        left: $left;
+        bottom: $bottom;
+    }
+
+    &:hover:before {
+        visibility: visible;
+        transform: translate(0, 20px);
+    }
+
+}
+
+
+@mixin hoverLinkStylingMenuOpen {
+    color: white;
+
+    &:before {
+        content: "";
+        background-color: white;
+    }
+}
+
+/*=============================================
+=            Header Section            =
+=============================================*/
+
+
+
+/*----------  Start Navigation  ----------*/
+
+.header-site {
+    width: 100%;
+    display: flex;
+    padding: 3em 0;
+    z-index: 5;
+    position: fixed;
+}
+
+
+/*----------  Logo  ----------*/
+
+.logo-img-link {
+    width: 10%;
+    position: relative;
+}
+
+.text-img {
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background: url(http://wamazury.pl/wp-content/uploads/2019/04/Logo-Text.jpg) no-repeat center center;
+    background-size: contain;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transition: 0.8s;
+    display: block;
+}
+
+.boat-img {
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transition: 0.8s;
+    background: url(http://wamazury.pl/wp-content/uploads/2019/04/Logo-Boat.jpg) no-repeat center center;
+    background-size: contain;
+    opacity: 1;
+}
+
+
+/*----------  Center logo section  ----------*/
+
+
+.menu-contact {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+        font-weight: $font-weight;
+        font-size: $font-size;
+        font-weight: 700;
+    }
+
+    p:first-of-type {
+        margin-right: 1.8em;
+    }
+}
+
+.menu-cnt-link {
+    @include hoverLinkStyling(0, -5px);
+    padding-right: 2em;
+}
+
+
+
+/*----------  Language option  ----------*/
+
+.menu-and-lang {
+    width: 10%;
+    height: 75px;
+    position: relative;
+}
+
+.lang-option {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3em;
+
+    span {
+        font-weight: $font-weight;
+        font-size: $font-size;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 8;
+        font-weight: 700;
+    }
+
+    span:nth-of-type(1) {
+        padding-right: 8px;
+    }
+
+    span:nth-of-type(3) {
+        padding-left: 8px;
+    }
+
+}
+
+.dash {
+    position: relative;
+    display: inline-block;
+    background: $primary-color;
+    width: 10%;
+    height: 1px;
+    margin: auto 0;
+}
+
+
+/*----------  Menu block  ----------*/
+
+.menu-sign {
+    position: absolute;
+    height: calc(100vh - 135px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+}
+
+.menu-sign-link {
+    @include hoverLinkStyling(0, -5px);
+}
+
+.menu-sign-link.before-ele {
+    @include hoverLinkStylingMenuOpen();
+    line-height: 1.5em;
+    box-shadow: inset 0px 6px 3px -3px snow;
+}
+
+/*----------  Full screen navigation  ----------*/
+
+.main-fullscreen-nav {
+    z-index: 6;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: $primary-color;
+    line-height: 11em;
+    transition: all 0.5s ease-in-out;
+    top: 0;
+
+    ul {
+        position: relative;
+        top: 30%;
+    }
+
+    li {
+        margin-left: 30%;
+    }
+
+    a {
+        font-family: $abril-font;
+        color: white;
+        text-decoration: none;
+        font-size: 8em;
+
+        &:hover {
+            color: $primary-color;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        }
+    }
+
+}
+
+/*----------  Left container - WAM Link  ----------*/
+
+.wam-fixed-cnt {
+    height: 80%;
+    width: 10%;
+    z-index: 8;
+    position: fixed;
+    bottom: 0;
+
+}
+
+.wam-fixed-link {
+    @include hoverLinkStyling(25%, -10px);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    left: 50%;
+    top: 55%;
+}
+
+.wam-fixed-link.before-ele {
+    @include hoverLinkStylingMenuOpen();
+}
+
+/*----------  Main Middle Content  ----------*/
+
+.main-content {
+    width: 80%;
+    height: 92vh;
+    padding-top: 13.5em;
+    margin: 0 auto;
+}
+
+
+/*=====  End of Header Section  ======*/

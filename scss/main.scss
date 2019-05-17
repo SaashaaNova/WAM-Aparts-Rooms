@@ -1,0 +1,100 @@
+@mixin blend-mode {
+    display: block;
+    font-family: $abril-font;
+    margin: auto 0;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+    background: black;
+    mix-blend-mode: screen;
+    transition: 0.5s ease-in-out;    
+}
+
+
+// @import 'mixin';
+@import 'variables';
+
+/*----------  Home page imports  ----------*/
+@import 'basic';
+@import 'bookingCircle';
+@import 'headerNav';
+@import 'mobile';
+@import 'sliders';
+@import 'localistaion';
+@import 'contact';
+@import 'apartmentsAndRooms';
+
+
+/*---------- Animations  ----------*/
+@import 'keyframes';
+
+
+/*----------  media queries  ----------*/
+
+@import 'mediaQueries';
+
+
+
+.body-hide-scroll {
+    overflow: hidden;
+}
+
+.remove-logo {
+    opacity: 0;
+    transform: 0.8s;
+    z-index: -1;
+}
+
+.open-nav {
+    opacity: 1;  
+}
+
+.close-nav {
+    height: 0;
+    opacity: 0;
+
+    ul {
+        display: none;
+    }
+}
+
+.active-dot {
+    border: 1px solid $primary-color;
+    background: white;
+    width:1.6em;
+    height:1.6em;
+    border-radius: 100%;
+    margin-right: 2em;
+    cursor: pointer;
+    transition: 0.7s ease-in-out;
+    z-index: 2;
+}
+
+.active-slide {
+    opacity: 1;
+    z-index: 2; 
+    transition: opacity 0.7s ease-in-out;
+}
+     
+.slider-link-hover {
+    font-size: 8em;
+    @include blend-mode(); 
+}
+
+.outline-link-hover {
+    font-size: 15em;
+    @include blend-mode();  
+}
+
+.hide-reservation {
+    z-index: -10;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.circle-scale {
+    opacity: 1;
+    transform: opacity 0.5s linear;
+    transition-delay: 0.5s;
+    animation: circleScale 0.5s ease-out 0.5s;
+}
+

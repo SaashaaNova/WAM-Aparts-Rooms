@@ -1,0 +1,94 @@
+/*=============================================
+=            Animations            =
+=============================================*/
+
+
+/*----------  Animations intro Header&Main content&Offer Content  ----------*/
+
+.start_static,
+.start_maincontent,
+.start_content {
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.start_static {
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+.start_maincontent {
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+
+.start_content {
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+}
+
+.anim_maincontent--slidedown {
+    animation-name: slideDownMainContent;
+}
+
+.anim_static--fadein {
+    animation-name: fadeInStatic;
+}
+
+
+/*----------  Animations Page Reloding  ----------*/
+
+/*----------  Navigation FadeIn  ----------*/
+
+
+@keyframes fadeInStatic {
+    0% {
+      opacity: 0;  
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDownMainContent {
+    0% {
+      opacity: 0;
+      height: 0;
+    }
+  
+    100% {
+      opacity: 1;
+      height: 95vh;
+    }
+  }
+
+
+  /*----------  Circle Reservation  ----------*/
+
+  @keyframes circleScale {
+    0% {
+      opacity: 0;
+      transform: scale(0,0) ;
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1,1);
+    }
+  }
+
+  
+  /*----------  Spinn Arrows  ----------*/
+
+  @keyframes spinner {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(-360deg);
+    }
+}
+
+
+/*=====  End of Animations  ======*/

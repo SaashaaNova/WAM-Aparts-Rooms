@@ -1,0 +1,8 @@
+/css
+/dist
+/img
+/node_modules
+/package-lock.json
+/yarn.lock
+/favicon
+/.vscode

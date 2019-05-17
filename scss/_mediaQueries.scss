@@ -1,0 +1,191 @@
+
+@media screen and (max-width:2000px)  {
+
+    .dot {
+        margin-right: 0.7em;
+    }
+
+}
+
+@media screen and (max-width:1500px)  {
+ 
+    .apart-offer,
+    .room-offer,
+    .kitchen {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider-section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .apart-info,
+    .room-info,
+    .kitchen-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .apar-desc,
+    .room-desc,
+    .kitchen-desc {
+        max-width: 100em;
+        margin: 0 auto;    
+    }
+
+    .contact-text-section {
+        max-width: 70%;
+    }
+
+}
+
+@media screen and (max-width:1400px)  {
+
+    .main-fullscreen-nav li {
+        margin-left: 15%;
+    }
+
+    .local-text-section {
+        position: absolute;
+        width: 80%;
+        height: 50%;
+        margin: 0 auto;
+        text-align: center;
+        bottom: 0;
+        left: -50%;
+        right: -50%;
+    }
+
+    .local-adress {
+        position: absolute;
+        margin-top: 0;
+        left: -50%;
+        right: -50%; 
+    }
+
+    .local-description {
+        margin-top: 5em;  
+    }
+
+    .local-img-map {
+        width:100%;
+        height: 50%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            display: flex;
+            flex-direction: column;  
+            align-items: center;
+            margin-bottom: 1em;
+        }
+       
+    }
+
+}
+
+
+@media screen and (min-width:850px)  {
+
+    .header-mobile,
+    .nav-bottom-mobile {
+        display: none;
+    }  
+
+}
+
+@media screen and  (max-width: 850px) {
+
+    .main-slider {
+        max-height: 95%;
+    }
+
+    .link-element {
+        padding-left: 5em;
+    }
+
+    .logo-img-link,
+    .menu-contact,
+    .menu-and-lang,
+    .menu-sign,
+    .footer {
+        display: none;
+    }
+
+    .apart-header h1,
+    .rooms-header h1 {
+        font-size: 8em;
+    }
+
+    .main-fullscreen-nav li {
+        margin-left: 15%;
+    }
+
+    .offer-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dots.offer-dots {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrows.offer-arr {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 0em;
+    }
+
+    .local-text-section {
+        height: 56%;
+    }
+
+    .local-description {
+        height: 80%;
+    }
+
+    .local-img-map {
+        height: 40%;
+    }
+
+}
+
+
+/*----------  width 300 px phone  ----------*/
+
+@media screen and (max-width:700px)  {
+
+    .text-book-circle {
+        width: 50em;
+        height: 50em;
+        
+        &:after {
+            display: none;
+        }
+    }
+
+    .menu-contact-mobile p:first-child {
+        display: none;
+    }
+
+    .local-text-section {
+        height: 55%;
+    }
+
+    .local-description {
+        height: 100%; 
+    }
+
+    .local-img-map {
+        height: 50%;
+    }
+}
