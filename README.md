@@ -5,8 +5,8 @@
 </p>
 
 ## Website
+<a href="https://wamazury.pl" target="_blank">WAM Apartments&Rooms</a>
 
-<a href="http://example.com/" target="_blank">Hello, world!</a>
 
 ## Technologies and languages
 SASS & Gulp & VanillaJS
