@@ -1,14 +1,11 @@
-
-@media screen and (max-width:2000px)  {
-
+@media screen and (max-width: 1600px) {
     .dot {
         margin-right: 0.7em;
     }
-
 }
 
-@media screen and (max-width:1500px)  {
- 
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+
     .apart-offer,
     .room-offer,
     .kitchen {
@@ -26,88 +23,63 @@
     .kitchen-info {
         width: 100%;
         text-align: center;
+        border: none;
     }
 
     .apar-desc,
     .room-desc,
     .kitchen-desc {
         max-width: 100em;
-        margin: 0 auto;    
+        margin: 0 auto;
     }
 
     .contact-text-section {
         max-width: 70%;
     }
 
-}
-
-@media screen and (max-width:1400px)  {
-
-    .main-fullscreen-nav li {
-        margin-left: 15%;
+    .localisation-container {
+        margin-top: 7em;
     }
 
     .local-text-section {
-        position: absolute;
-        width: 80%;
-        height: 50%;
+        position: fixed;
         margin: 0 auto;
+        margin-top: 3em;
+        min-width: 80em;
+        max-height: 10em;
         text-align: center;
         bottom: 0;
         left: -50%;
         right: -50%;
+        top: 55%;
     }
 
     .local-adress {
         position: absolute;
         margin-top: 0;
         left: -50%;
-        right: -50%; 
+        right: -50%;
     }
 
     .local-description {
-        margin-top: 5em;  
+        margin-top: 5em;
     }
 
     .local-img-map {
-        width:100%;
+        width: 100%;
         height: 50%;
     }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-
-        span {
-            display: flex;
-            flex-direction: column;  
-            align-items: center;
-            margin-bottom: 1em;
-        }
-       
-    }
-
 }
 
-
-@media screen and (min-width:850px)  {
+@media screen and (min-width: 840px) {
 
     .header-mobile,
     .nav-bottom-mobile {
         display: none;
-    }  
-
+    }
 }
 
-@media screen and  (max-width: 850px) {
-
-    .main-slider {
-        max-height: 95%;
-    }
-
-    .link-element {
-        padding-left: 5em;
-    }
+@media screen and (max-width: 840px) and (orientation: portrait) {
 
     .logo-img-link,
     .menu-contact,
@@ -117,75 +89,265 @@
         display: none;
     }
 
-    .apart-header h1,
-    .rooms-header h1 {
-        font-size: 8em;
-    }
-
-    .main-fullscreen-nav li {
-        margin-left: 15%;
-    }
-
-    .offer-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dots.offer-dots {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .arrows.offer-arr {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding-right: 0em;
-    }
-
-    .local-text-section {
-        height: 56%;
-    }
-
-    .local-description {
-        height: 80%;
-    }
-
-    .local-img-map {
-        height: 40%;
-    }
 
 }
 
-
-/*----------  width 300 px phone  ----------*/
-
-@media screen and (max-width:700px)  {
-
-    .text-book-circle {
-        width: 50em;
-        height: 50em;
-        
-        &:after {
-            display: none;
-        }
-    }
+@media screen and (max-width: 420px) and (orientation: portrait) {
 
     .menu-contact-mobile p:first-child {
         display: none;
     }
 
+    .text-book-circle {
+        transform: scale(.7);
+    }
+
+    .wam-fixed-link {
+        font-size: 1.8em;
+    }
+
+    .main-slider {
+        height: 92%;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .slider-nav {
+        justify-content: center;
+    }
+
+    .slide-one,
+    .slide-two,
+    .slide-three {
+        .slider-link {
+            font-size: 6.6em;
+        }
+    }
+
+    .main-fullscreen-nav {
+        line-height: 8em;
+
+        a {
+            font-size: 5em;
+        }
+    }
+
+    .apart-offer,
+    .room-offer,
+    .kitchen {
+        margin-bottom: 4em;
+    }
+
+    .apart-header,
+    .rooms-header {
+        h1 {
+            font-size: 5em;
+        }
+
+        p {
+            line-height: 2.2em;
+            font-size: 2em;
+        }
+    }
+
+    .apart-info,
+    .room-info,
+    .kitchen-info {
+        border-bottom: 1px solid $primary-color;
+        padding-bottom: 7em;
+    }
+
+
+    .apar-desc,
+    .room-desc,
+    .kitchen-desc {
+
+        h2 {
+            font-size: 10em;
+        }
+
+        margin-bottom: 3em;
+
+        p {
+            font-size: 2em;
+        }
+    }
+
+    .amenities,
+    .policy {
+        span {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        li {
+            font-size: 2em;
+        }
+    }
+
+    .res-link-desc {
+        font-size: 3em;
+    }
+
+
+    .localisation-container {
+        margin-top: 0;
+    }
+
     .local-text-section {
-        height: 55%;
+        margin-top: 0;
+        min-width: 50em;
+        max-height: 10em;
+        top: 20%;
     }
 
     .local-description {
-        height: 100%; 
+        margin-top: 10em;
+
+        h1 {
+            font-size: 6em;
+        }
+
+        p {
+            font-size: 1.9em;
+        }
     }
 
     .local-img-map {
-        height: 50%;
+        display: none;
     }
+
+    .contact-text-section {
+        h1 {
+            font-size: 5em;
+        }
+    }
+
+    .contact-adress {
+        span {
+            font-size: 2.2em;
+        }
+    }
+
+}
+
+@media screen and (max-width: 380px) and (orientation: portrait) {
+
+    .text-book-circle {
+        width: 60em;
+        height: 60em;
+
+        &::after {
+            width: 50em;
+            height: 50em;
+        }
+
+        .circle-heading {
+            font-size: 3em;
+        }
+    }
+
+}
+
+@media screen and (max-width: 330px) and (orientation: portrait) {
+
+    .text-book-circle {
+        width: 50em;
+        height: 50em;
+
+        &::after {
+            width: 42em;
+            height: 42em;
+        }
+
+        .circle-heading {
+            font-size: 2.4em;
+        }
+
+        span {
+
+            font-size: 1.8em;
+
+        }
+    }
+
+    .main-slider {
+        height: 90%;
+    }
+
+    .wam-fixed-link {
+        font-size: 1.6em;
+    }
+
+    .slide-one,
+    .slide-two,
+    .slide-three {
+        .slider-link {
+            font-size: 5.8em;
+        }
+    }
+
+    .apart-header,
+    .rooms-header {
+        h1 {
+            font-size: 4em;
+        }
+
+        p {
+            line-height: 1.8em;
+            font-size: 1.9em;
+        }
+    }
+
+    .apar-desc,
+    .room-desc,
+    .kitchen-desc {
+
+        h2 {
+            font-size: 7em;
+        }
+
+        p {
+            font-size: 1.8em;
+        }
+    }
+
+    .kitchen-desc h2 {
+
+        font-size: 6em;
+    }
+
+
+    .amenities,
+    .policy {
+        span {
+            font-size: 2.2em;
+        }
+
+        li {
+            font-size: 1.7em;
+        }
+    }
+
+
+    .local-text-section {
+        min-width: 35em;
+        top: 15%;
+    }
+
+    .local-description {
+        margin-top: 7em;
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 1em;
+        }
+
+        p {
+            font-size: 1.7em;
+        }
+    }
+
 }

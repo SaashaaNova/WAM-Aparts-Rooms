@@ -3,12 +3,12 @@
     width: 100vw;
     height: 100vh;
     background: rgba(7, 70, 91, 0.6);
-    visibility: visible; 
+    visibility: visible;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
-    z-index: 12;
+    z-index: 150;
 }
 
 .text-book-circle {
@@ -22,7 +22,7 @@
     align-items: center;
     filter: drop-shadow(0 0 40px $primary-color);
     opacity: 0;
-    
+
     &::after {
         content: '';
         display: block;
@@ -32,7 +32,7 @@
         position: absolute;
         border-radius: 50%;
     }
-    
+
 
     .circle-heading {
         color: white;
@@ -41,7 +41,7 @@
         text-align: center;
         padding: 3em 0;
         max-width: 18em;
-        
+
     }
 
     span {
@@ -68,20 +68,20 @@
         content: '';
         display: block;
         width: 2.8em;
-        height:0px;
+        height: 0px;
         border-bottom: solid 4px white;
         position: absolute;
         transform: rotate(45deg);
         left: 33%;
-        
+
     }
 
-    &::before{
+    &::before {
         content: '';
         display: block;
         position: absolute;
         width: 2.8em;
-        height:0px;
+        height: 0px;
         border-bottom: solid 4px white;
         transform: rotate(-45deg);
         left: 33%;
@@ -92,4 +92,3 @@
         filter: drop-shadow(0 0 10px $primary-color-light);
     }
 }
-
